@@ -14,13 +14,18 @@ use pocketmine\utils\TextFormat as TF;
 class WorldBorder extends PluginBase implements Listener
 {
 
-    public const PREFIX = TF::GRAY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GRAY.")".TF::RESET;
+    public const PREFIX = TF::GRAY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GRAY.") ".TF::RESET; # ") " = '(!)Error' -> '(!) Error'
 
+    public function onLoad(){
+        $this->getLogger->info("Loading WorldBorder by Soul ✞#9999");
+    }
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
-        @mkdir($this->getDataFolder(), 0744, true);
-        $this->saveResource('config.yml', false);
-        $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML);
+        @mkdir($this->saveDefaultConfig());
+        $this->getResource("config.yml");
+
+        $this->getLogger->info("Enabling WorldBorder by Soul ✞#9999");
+        $this->getLogger->info("If you find this project useful, please contact my Discord to donate")
     }
 
     /** @param PlayerMoveEvent $e */
@@ -42,4 +47,7 @@ class WorldBorder extends PluginBase implements Listener
 
     }
 
+    public function onDisable(){
+        $this->getLogger->info("Disabling WorldBorder by Soul ✞#9999");
+    }
 }
