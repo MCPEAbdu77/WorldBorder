@@ -1,7 +1,7 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Pinesolz/WorldBorder 
 build-by-default: true
 branches:
-- master
+- main
 projects:
   WorldBorder:
     icon: "media/icon.png"
