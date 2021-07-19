@@ -14,7 +14,7 @@ use pocketmine\utils\TextFormat as TF;
 class WorldBorder extends PluginBase implements Listener
 {
 
-    public const PREFIX = TF::GREY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GREY.")".TF::RESET;
+    public const PREFIX = TF::GRAY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GRAY.")".TF::RESET;
 
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
@@ -35,7 +35,7 @@ class WorldBorder extends PluginBase implements Listener
 
             if($v2->distance($v1) > $dat[$level->getName()]){
                 $e->setCancelled();
-                $player->sendMessage(WorldBorder::PREFIX.TF::RED.TF::BOLD."Error: ".TF::RESET.TF::GREY."You're at the world border!".TF::RESET);
+                $player->sendMessage(WorldBorder::PREFIX.TF::RED.TF::BOLD."Error: ".TF::RESET.TF::GRAY."You're at the world border!".TF::RESET);
             }
 
         }
