@@ -1,3 +1,4 @@
+---
 #   $$\      $$\                     $$\       $$\                    
 #   $$ | $\  $$ |                    $$ |      $$ | $$$$$$$\                            $$\                 
 #   $$ |$$$\ $$ | $$$$$$\   $$$$$$\  $$ | $$$$$$$ | $$  __$$\                           $$ |     
@@ -22,3 +23,4 @@ version: 1.0.0
 border: 
   world: 700 # Border World and Size of Border. 
              # Selected World also Teleports Players to World's Default Spawn or Player Spawn Point. (If /setplayer spawn is executed, or bed is used)
+...
