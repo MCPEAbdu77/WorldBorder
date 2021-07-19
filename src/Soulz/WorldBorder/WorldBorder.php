@@ -26,7 +26,7 @@ class WorldBorder extends PluginBase implements Listener
         $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML);
 
         $this->getLogger->info("Enabling WorldBorder by Soul ✞#9999");
-        $this->getLogger->info("If you find this project useful, please contact my Discord to donate")
+        $this->getLogger->info("If you find this project useful, please contact my Discord to consider donating");
     }
 
     /** @param PlayerMoveEvent $e */
