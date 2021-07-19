@@ -1,0 +1,19 @@
+#  $$\      $$\                     $$\       $$\                    
+#  $$ | $\  $$ |                    $$ |      $$ | $$$$$$$\                            $$\                 
+#  $$ |$$$\ $$ | $$$$$$\   $$$$$$\  $$ | $$$$$$$ | $$  __$$\                           $$ |     
+#  $$ $$ $$\$$ |$$  __$$\ $$  __$$\ $$ |$$  __$$ | $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  
+#  $$$$  _$$$$ |$$ /  $$ |$$ |  \__|$$ |$$ /  $$ | $$$$$$$\ |$$  __$$\ $$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ 
+#  $$$  / \$$$ |$$ |  $$ |$$ |      $$ |$$ |  $$ | $$  __$$\ $$ /  $$ |$$ |  \__|$$ /  $$ |$$$$$$$$ |$$ |  \__|   
+#  $$  /   \$$ |\$$$$$$  |$$ |      $$ |\$$$$$$$ | $$ |  $$ |$$ |  $$ |$$ |      $$ |  $$ |$$   ____|$$ |   
+#  \__/     \__| \______/ \__|      \__| \_______| $$$$$$$  |\$$$$$$  |$$ |      \$$$$$$$ |\$$$$$$$\ $$ |           
+#         PocketMine World Border Plugin           \_______/  \______/ \__|       \_______| \_______|\__|                                                                                                           
+
+# Version- Don't Change!
+version: 1.0.0
+
+border: 
+  world: 700 # Border World and Size of Border. Selected World also Teleports Players to World's Default Spawn or Player Spawn Point. (If /setplayer spawn is executed, or bed is used)
+  
+# WorldBorder Plugin
+# Download: https://github.com/Pinesolz/WorldBorder/
+# Author: Soulz
