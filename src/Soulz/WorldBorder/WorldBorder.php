@@ -10,18 +10,20 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
 
-class Loader extends PluginBase implements Listener
+/** @var WorldBorder */
+class WorldBorder extends PluginBase implements Listener
 {
-  
+
     public const PREFIX = TF::GREY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GREY.")".TF::RESET;
-  
+
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
         @mkdir($this->getDataFolder(), 0744, true);
         $this->saveResource('config.yml', false);
         $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML);
     }
-    
+
+    /** @param PlayerMoveEvent $e */
     public function onMove(PlayerMoveEvent $e): void{
         $player = $e->getPlayer();
         $level = $player->getLevel();
@@ -32,8 +34,12 @@ class Loader extends PluginBase implements Listener
             $v2 = new Vector3($player->x, 0, $player->z);
 
             if($v2->distance($v1) > $dat[$level->getName()]){
-                $event->setCancelled();
-                $player->sendMessage(WorldBorder::PREFIX.TF::RED.TF::BOLD."Error: ".TF::RESET.TF::GREY."You've reached the world border!".TF::RESET);
+                $e->setCancelled();
+                $player->sendMessage(WorldBorder::PREFIX.TF::RED.TF::BOLD."Error: ".TF::RESET.TF::GREY."You're at the world border!".TF::RESET);
             }
+
         }
+
+    }
+
 }
