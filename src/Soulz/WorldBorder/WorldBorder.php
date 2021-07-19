@@ -17,7 +17,7 @@ class WorldBorder extends PluginBase implements Listener
     public const PREFIX = TF::GRAY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GRAY.") ".TF::RESET; # ") " = '(!)Error' -> '(!) Error'
 
     public function onLoad(){
-        $this->getLogger->info("Loading WorldBorder by Soul ✞#9999");
+        $this->getLogger()->info("Loading WorldBorder by Soul ✞#9999");
     }
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
@@ -25,8 +25,8 @@ class WorldBorder extends PluginBase implements Listener
         $this->saveResource('config.yml', false);
         $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML);
 
-        $this->getLogger->info("Enabling WorldBorder by Soul ✞#9999");
-        $this->getLogger->info("If you find this project useful, please contact my Discord to consider donating");
+        $this->getLogger()->info("Enabling WorldBorder by Soul ✞#9999");
+        $this->getLogger()->info("If you find this project useful, please contact my Discord to consider donating");
     }
 
     /** @param PlayerMoveEvent $e */
@@ -49,6 +49,6 @@ class WorldBorder extends PluginBase implements Listener
     }
 
     public function onDisable(){
-        $this->getLogger->info("Disabling WorldBorder by Soul ✞#9999");
+        $this->getLogger()->info("Disabling WorldBorder by Soul ✞#9999");
     }
 }
