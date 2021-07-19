@@ -3,4 +3,4 @@ main: Soulz\WorldBorder\WorldBorder
 version: 1.0.0
 api: 3.0.0
 author: Soulz
-description: "Creates World Border and Blocks Players from Falling into the Void"
+description: "Creates World Border and Blocks Players from Entering the Border"
