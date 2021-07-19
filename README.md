@@ -1,6 +1,7 @@
 # WorldBorder Info-
 Prevent players from passing a certain point in your server worlds!<br>
-Stops glitchers trying to get past the border locking them in an uncomfortable position!
+Stops glitchers trying to get past the border locking them in an uncomfortable position!<br>
+The border unfortunately does **not** have a literal view like the icon!<br><br><img src="media/icon.png" width="150"><img src="media/WorldBorder.png" width="400">
 
 # Common Questions-
 **Q: Could a player teleport past the world border via command or ender pearl?**<br>
@@ -17,4 +18,5 @@ Stops glitchers trying to get past the border locking them in an uncomfortable p
 - Set your desired world and world size under the "plugin data" folder and restart / reload your server
 
 # Contact
-- Soul ✞#9999 (Discord)
+- Soul ✞#9999 (Discord)<br>
+<img src="media/Soulz.png" width="150">
