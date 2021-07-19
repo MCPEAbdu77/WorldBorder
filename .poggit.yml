@@ -4,6 +4,6 @@ branches:
 - master
 projects:
   WorldBorder:
-    path: ""
     icon: "media/icon.png"
+    path: ""
 ...
