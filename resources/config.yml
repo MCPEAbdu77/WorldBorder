@@ -1,19 +1,24 @@
-#  $$\      $$\                     $$\       $$\                    
-#  $$ | $\  $$ |                    $$ |      $$ | $$$$$$$\                            $$\                 
-#  $$ |$$$\ $$ | $$$$$$\   $$$$$$\  $$ | $$$$$$$ | $$  __$$\                           $$ |     
-#  $$ $$ $$\$$ |$$  __$$\ $$  __$$\ $$ |$$  __$$ | $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  
-#  $$$$  _$$$$ |$$ /  $$ |$$ |  \__|$$ |$$ /  $$ | $$$$$$$\ |$$  __$$\ $$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ 
-#  $$$  / \$$$ |$$ |  $$ |$$ |      $$ |$$ |  $$ | $$  __$$\ $$ /  $$ |$$ |  \__|$$ /  $$ |$$$$$$$$ |$$ |  \__|   
-#  $$  /   \$$ |\$$$$$$  |$$ |      $$ |\$$$$$$$ | $$ |  $$ |$$ |  $$ |$$ |      $$ |  $$ |$$   ____|$$ |   
-#  \__/     \__| \______/ \__|      \__| \_______| $$$$$$$  |\$$$$$$  |$$ |      \$$$$$$$ |\$$$$$$$\ $$ |           
-#         PocketMine World Border Plugin           \_______/  \______/ \__|       \_______| \_______|\__|                                                                                                           
+#   $$\      $$\                     $$\       $$\                    
+#   $$ | $\  $$ |                    $$ |      $$ | $$$$$$$\                            $$\                 
+#   $$ |$$$\ $$ | $$$$$$\   $$$$$$\  $$ | $$$$$$$ | $$  __$$\                           $$ |     
+#   $$ $$ $$\$$ |$$  __$$\ $$  __$$\ $$ |$$  __$$ | $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  
+#   $$$$  _$$$$ |$$ /  $$ |$$ |  \__|$$ |$$ /  $$ | $$$$$$$\ |$$  __$$\ $$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ 
+#   $$$  / \$$$ |$$ |  $$ |$$ |      $$ |$$ |  $$ | $$  __$$\ $$ /  $$ |$$ |  \__|$$ /  $$ |$$$$$$$$ |$$ |  \__|   
+#   $$  /   \$$ |\$$$$$$  |$$ |      $$ |\$$$$$$$ | $$ |  $$ |$$ |  $$ |$$ |      $$ |  $$ |$$   ____|$$ |   
+#   \__/     \__| \______/ \__|      \__| \_______| $$$$$$$  |\$$$$$$  |$$ |      \$$$$$$$ |\$$$$$$$\ $$ |           
+#          PocketMine World Border Plugin           \_______/  \______/ \__|       \_______| \_______|\__|                                                                                                           
 
 # Version- Don't Change!
 version: 1.0.0
 
+# Important Note to EVERYONE:
+# The border will set whatever your distance is away from the world spawn. Say my world spawn = 300, 56, 300 and my border size = 700. 
+# The border will extend 700 from 300, meaning the "border" would be:   1000-----1000
+#                                                                       |           |     # This meaning it expands 700 in all directions
+#    WorldBorder Plugin                                                 |  300,300  |     # If the border was 20, it would again expand 20 blocks each way
+#    Download: https://github.com/Pinesolz/WorldBorder                  |           |     # WorldBorder does NOT effect height.
+#    Author: Soulz                                                     -400 ----- -400
+
 border: 
-  world: 700 # Border World and Size of Border. Selected World also Teleports Players to World's Default Spawn or Player Spawn Point. (If /setplayer spawn is executed, or bed is used)
-  
-# WorldBorder Plugin
-# Download: https://github.com/Pinesolz/WorldBorder/
-# Author: Soulz
+  world: 700 # Border World and Size of Border. 
+             # Selected World also Teleports Players to World's Default Spawn or Player Spawn Point. (If /setplayer spawn is executed, or bed is used)
