@@ -2,7 +2,7 @@
 
 namespace Soulz\WorldBorder;
 
-use pocketmine\event\Listener;
+use pocketmine\event\Listener; // remove on listener implentation
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\math\Vector3;
 use pocketmine\Player;
@@ -13,14 +13,17 @@ use pocketmine\utils\TextFormat as TF;
 class WorldBorder extends PluginBase implements Listener
 {
 
+    /** @var self */
+    // public static $instance;
+
     public function onLoad(){
         $this->getLogger()->info("Loading WorldBorder by Soul ✞#9999");
     }
     public function onEnable(){
-        $this->getServer()->getPluginManager()->registerEvents($this,$this);
+        $this->getServer()->getPluginManager()->registerEvents($this,$this); // soon to be "$this->getServer()->getPluginManager()->registerEvents(new EventListener($this),$this);"
         @mkdir($this->getDataFolder(), 0744, true);
         $this->saveResource('config.yml', false);
-        $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML);
+        $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML); 
 
         $this->getLogger()->info("Enabling WorldBorder by Soul ✞#9999");
         $this->getLogger()->info("If you find this project useful, please contact my Discord to consider donating");
