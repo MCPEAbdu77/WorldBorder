@@ -40,7 +40,7 @@ class WorldBorder extends PluginBase implements Listener
 
             if($v2->distance($v1) > $dat[$level->getName()]){
                 $e->setCancelled();
-                $player->sendMessage(WorldBorder::PREFIX.TF::RED.TF::BOLD."Error: ".TF::RESET.TF::GRAY."You're at the world border!".TF::RESET);
+                $player->sendMessage(WorldBorder::PREFIX.$this->getConfig()->get("border-message").TF::RESET);
             }
 
         }
