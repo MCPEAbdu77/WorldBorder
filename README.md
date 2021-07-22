@@ -1,4 +1,10 @@
-# WorldBorder Info-
+# WorldBorder
+[![](https://poggit.pmmp.io/shield.state/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
+[![](https://poggit.pmmp.io/shield.api/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
+[![](https://poggit.pmmp.io/shield.dl.total/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
+[![](https://poggit.pmmp.io/shield.dl/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
+
+# Info-
 Prevent players from passing a certain point in your server worlds!<br>
 Stops glitchers trying to get past the border locking them in an uncomfortable position!<br>
 The border unfortunately does **not** have a literal view like the icon!<br><br><img src="media/icon.png" width="150"><img src="media/WorldBorder.png" width="400">
@@ -23,3 +29,7 @@ The border unfortunately does **not** have a literal view like the icon!<br><br>
 
 # Execution
 <img src="media/WorldBorder.jpg" width="250">
+
+# Reporting Bugs
+To report a bug, open an issue on the Github:<br>
+https://github.com/Pinesolz/WorldBorder
