@@ -10,7 +10,6 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
 
-/** @var WorldBorder */
 class WorldBorder extends PluginBase implements Listener
 {
 
