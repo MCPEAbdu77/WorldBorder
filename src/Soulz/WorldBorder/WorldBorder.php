@@ -13,8 +13,6 @@ use pocketmine\utils\TextFormat as TF;
 class WorldBorder extends PluginBase implements Listener
 {
 
-    public const PREFIX = TF::GRAY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GRAY.") ".TF::RESET; # ") " = '(!)Error' -> '(!) Error'
-
     public function onLoad(){
         $this->getLogger()->info("Loading WorldBorder by Soul ✞#9999");
     }
@@ -40,7 +38,7 @@ class WorldBorder extends PluginBase implements Listener
 
             if($v2->distance($v1) > $dat[$level->getName()]){
                 $e->setCancelled();
-                $player->sendMessage(WorldBorder::PREFIX.$this->getConfig()->get("border-message").TF::RESET);
+                $player->sendMessage(Utils::PREFIX.$this->getConfig()->get("border-message").TF::RESET);
             }
 
         }
