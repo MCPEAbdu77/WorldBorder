@@ -23,4 +23,27 @@ version: 1.0.0
 border: 
   world: 700 # Border World and Size of Border. 
              # Selected World also Teleports Players to World's Default Spawn or Player Spawn Point. (If /setplayer spawn is executed, or bed is used)
+  border-message: "§l§cError: §r§7You've reached the world border!"
+
+# For colour, use symbol: & , §
+    # Red = §4, §c
+    # Gold = §6
+    # Yellow = §e
+    # Dark Green = §2
+    # Green = §a
+    # Aqua = §b
+    # Dark Aqua = §3
+    # Dark Blue = §1
+    # Blue = §9
+    # Light Purple = §d
+    # Dark Purple = §5
+    # White = §f
+    # Gray = §7
+    # Dark Gray = §8
+    # Black = §0
+# Other Format Codes:
+    # Obfuscated = §k
+    # Bold = §l
+    # Italic = §o
+    # Reset = §r
 ...
