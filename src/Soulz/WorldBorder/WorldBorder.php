@@ -2,7 +2,7 @@
 
 namespace Soulz\WorldBorder;
 
-use pocketmine\event\Listener; // remove on listener implentation
+use pocketmine\event\Listener; // remove on evlistener implentation
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\math\Vector3;
 use pocketmine\Player;
@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
 
-class WorldBorder extends PluginBase implements Listener
+class WorldBorder extends PluginBase implements Listener // remove implement... on evlist implementation
 {
 
     /** @var self */
@@ -21,6 +21,12 @@ class WorldBorder extends PluginBase implements Listener
     }
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this,$this); // soon to be "$this->getServer()->getPluginManager()->registerEvents(new EventListener($this),$this);"
+        // $commands = [
+        // new SetPosCommand(),
+        // new CreateCommand(),
+        // new RemoveCommand()
+        // ];
+        // $this->getServer()->getCommandMap()->registerAll("BorderCommand", $commands);
         @mkdir($this->getDataFolder(), 0744, true);
         $this->saveResource('config.yml', false);
         $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML); 
