@@ -3,6 +3,7 @@
 [![](https://poggit.pmmp.io/shield.api/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
 [![](https://poggit.pmmp.io/shield.dl.total/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
 [![](https://poggit.pmmp.io/shield.dl/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
+**This plugin is not yet ready for Poggit**
 
 # Info-
 Prevent players from passing a certain point in your server worlds!<br>
