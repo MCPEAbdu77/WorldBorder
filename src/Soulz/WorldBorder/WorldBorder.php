@@ -2,7 +2,7 @@
 
 namespace Soulz\WorldBorder;
 
-use pocketmine\event\Listener; // remove on evlistener implentation
+use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\math\Vector3;
 use pocketmine\Player;
@@ -10,8 +10,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
 
-class WorldBorder extends PluginBase implements Listener // remove implement... on evlist implementation
-{
+class WorldBorder extends PluginBase {
 
     /** @var self */
     public static $instance;
