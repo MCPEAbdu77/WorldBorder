@@ -2,6 +2,8 @@
 
 namespace Soulz\WorldBorder;
 
+use pocketmine\utils\TextFormat as TF;
+
 class Utils {
 
     public const PREFIX = TF::GRAY."(".TF::BOLD.TF::RED."!".TF::RESET.TF::GRAY.") ".TF::RESET; // ") " = '(!)border-message' -> '(!) border-message'
