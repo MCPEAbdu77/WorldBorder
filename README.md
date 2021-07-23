@@ -2,7 +2,7 @@
 [![](https://poggit.pmmp.io/shield.api/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
 [![](https://poggit.pmmp.io/shield.dl.total/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
 [![](https://poggit.pmmp.io/shield.dl/Bosses)](https://poggit.pmmp.io/p/WorldBorder)
-**This plugin is not yet ready for Poggit or download**<br>
+<br>**This plugin is not yet ready for Poggit or download**<br>
 **It is going through mass changes over the next few days**<br>Message my Discord to recieve an older eligible version.**
 # TODO:
 - Remove Border Spam || Add knockback option
