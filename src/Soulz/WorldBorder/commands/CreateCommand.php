@@ -11,10 +11,7 @@ use pocketmine\utils\TextFormat;
 class CreateCommand extends Command {
 
     public function __construct(){
-        parent::__construct("/wbcreate");
-        $this->setDescription("Creates the border with selected positions");
-        $this->setUsage("/wbcreate {border_name}");
-        $this->setPermission("border.create.command");
+        parent::__construct("/wbcreate", "Creates the border with selected positions", null, ["/worldbordercreate"]);
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args){
