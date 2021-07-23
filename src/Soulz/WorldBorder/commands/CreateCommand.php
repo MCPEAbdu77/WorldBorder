@@ -12,14 +12,14 @@ class CreateCommand extends Command {
 
     public function __construct(){
         parent::__construct("/wbcreate");
-        $this->setDescription("");
+        $this->setDescription("Creates the border with selected positions");
         $this->setUsage("/wbcreate {border_name}");
         $this->setPermission("border.create.command");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args){
         if(!$sender instanceof Player){
-            $sender->sendMessage("You must execute $commandLabel in-game!");
+            $sender->sendMessage("You must execute this command in-game!");
             return;
         }
         // continue later
