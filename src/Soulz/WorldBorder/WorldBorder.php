@@ -14,19 +14,20 @@ class WorldBorder extends PluginBase implements Listener // remove implement... 
 {
 
     /** @var self */
-    // public static $instance;
+    public static $instance;
 
     public function onLoad(){
         $this->getLogger()->info("Loading WorldBorder by Soul ✞#9999");
     }
     public function onEnable(){
-        $this->getServer()->getPluginManager()->registerEvents($this,$this); // soon to be "$this->getServer()->getPluginManager()->registerEvents(new EventListener($this),$this);"
-        // $commands = [
-        // new SetPosCommand(),
-        // new CreateCommand(),
-        // new RemoveCommand()
-        // ];
-        // $this->getServer()->getCommandMap()->registerAll("BorderCommand", $commands);
+        $this->getServer()->getPluginManager()->registerEvents(new EventListener($this),$this);
+        $commands = [
+        new SetPosCommand(),
+        new CreateCommand(),
+        new RemoveCommand()
+        ];
+        $this->getServer()->getCommandMap()->registerAll("BorderCommands", $commands);
+
         @mkdir($this->getDataFolder(), 0744, true);
         $this->saveResource('config.yml', false);
         $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML); 
