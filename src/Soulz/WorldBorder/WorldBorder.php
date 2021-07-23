@@ -8,6 +8,7 @@ use pocketmine\math\Vector3;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat as TF; # Line 40 - TF::RESET
 
 class WorldBorder extends PluginBase implements Listener {
 
