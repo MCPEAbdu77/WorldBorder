@@ -1,6 +1,5 @@
 # TODO:
 - Remove Border Spam || Add knockback option
-- Prefix Config
 - Teleport to default levels spawn option when border crossing || True/False Config
 
 # WorldBorder Info-
