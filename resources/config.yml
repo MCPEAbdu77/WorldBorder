@@ -14,11 +14,11 @@ version: 1.0.0
 
 # Important Note to EVERYONE:
 # The border will set whatever your distance is away from the world spawn. Say my world spawn = 300, 56, 300 and my border size = 700. 
-# The border will extend 700 from 300, meaning the "border" would be:   1000-----1000
+# The border will extend 175 from 300, meaning the "border" would be:  -475 ----- 475
 #                                                                       |           |     # This meaning it expands 175 blocks in all directions
 #    WorldBorder Plugin                                                 |  300,300  |     # If the border was 20, it would again expand 5 blocks each way
 #    Download: https://github.com/Pinesolz/WorldBorder                  |           |     # WorldBorder does NOT effect height.
-#    Author: Soulz                                                     -400 ----- -400
+#    Author: Soulz                                                     -125 ----- 125     # The border is circular! Diagram is just a rough sketch.
 
 border: 
   world: 700 # Border World and Size of Border. 
