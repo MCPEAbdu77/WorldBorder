@@ -8,7 +8,7 @@ use pocketmine\math\Vector3;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat as TF; # Line 40 - TF::RESET
+use pocketmine\utils\TextFormat;
 
 class WorldBorder extends PluginBase implements Listener {
 
@@ -27,8 +27,8 @@ class WorldBorder extends PluginBase implements Listener {
     }
 
     /** @param PlayerMoveEvent $e */
-    public function onMove(PlayerMoveEvent $e): void{
-        $player = $e->getPlayer();
+    public function onMove(PlayerMoveEvent $event): void {
+        $player = $event->getPlayer();
         $level = $player->getLevel();
         $dat = $this->getConfig()->get("border");
 
@@ -37,8 +37,8 @@ class WorldBorder extends PluginBase implements Listener {
             $v2 = new Vector3($player->x, 0, $player->z);
 
             if($v2->distance($v1) > $dat[$level->getName()]){
-                $e->setCancelled();
-                $player->sendMessage(Utils::RED_PREFIX.$this->getConfig()->get("border-message").TF::RESET);
+                $event->setCancelled();
+                $player->sendMessage(Utils::RED_PREFIX . $this->getConfig()->get("border-message") . TextFormat::RESET);
             }
 
         }
