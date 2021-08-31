@@ -12,10 +12,6 @@ use pocketmine\utils\TextFormat;
 
 class WorldBorder extends PluginBase implements Listener {
 
-    public function onLoad(){
-        $this->getLogger()->info("Loading WorldBorder by Soul ✞#9999");
-    }
-
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder(), 0744, true);
@@ -23,9 +19,6 @@ class WorldBorder extends PluginBase implements Listener {
         $this->config = new Config($this->getDataFolder() . 'config.yml', Config::YAML); 
         
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-
-        $this->getLogger()->info("Enabling WorldBorder by Soul ✞#9999");
-        $this->getLogger()->info("If you find this project useful, please contact my Discord to consider donating");
     }
 
     /** 
@@ -47,9 +40,5 @@ class WorldBorder extends PluginBase implements Listener {
 
         }
 
-    }
-
-    public function onDisable(){
-        $this->getLogger()->info("Disabling WorldBorder by Soul ✞#9999");
     }
 }
