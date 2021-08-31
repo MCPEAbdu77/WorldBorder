@@ -7,13 +7,15 @@ Prevent players from passing a certain point in your server worlds!<br>
 Stops glitchers trying to get past the border locking them in an uncomfortable position!<br>
 The border unfortunately does **not** have a literal view like the icon!<br><br><img src="icon.png" width="150"><img src="media/WorldBorder.png" width="400">
 
+| Discord | License | Poggit | Release |
+| :-----: | :-----: | :----: | :-----: |
+|[![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/kFacgS29ay)|[![GitHub license](https://img.shields.io/github/license/Pinesolz/WorldBorder.svg)](https://github.com/Pinesolz/WorldBorder/blob/master/LICENSE)|[![](https://poggit.pmmp.io/shield.api/WorldBorder)](https://poggit.pmmp.io/p/WorldBorder)|[![](https://poggit.pmmp.io/shield.state/WorldBorder)](https://poggit.pmmp.io/p/WorldBorder)
+
 # Common Questions-
 **Q: Could a player teleport past the world border via command or ender pearl?**<br>
 **A**: Nope! Anything player who passes the border will be frozen, and recieve the error message. This meaning the only way they could escape the border is by executing a warp command (ie. /spawn) or /suicide.<br><br>
 **Q: How can I choose where the border is?<br>**
 **A**: Using the configuration, setup your desired world and length. Configuration should be located under "Plugin Data\WorldBorder".<br><br>
-**Q: Is there a way to change the border message via config?<br>**
-**A**: Unfortunately, there is not at the moment. However, I plan to add more features to this plugin overtime. You can open an issue on the Github for any suggestions!<br><br>
 
 # Setup-
 - Download the plugin zip or phar
