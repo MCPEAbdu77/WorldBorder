@@ -5,7 +5,7 @@
 # WorldBorder Info-
 Prevent players from passing a certain point in your server worlds!<br>
 Stops glitchers trying to get past the border locking them in an uncomfortable position!<br>
-The border unfortunately does **not** have a literal view like the icon!<br><br><img src="media/icon.png" width="150"><img src="media/WorldBorder.png" width="400">
+The border unfortunately does **not** have a literal view like the icon!<br><br><img src="icon.png" width="150"><img src="media/WorldBorder.png" width="400">
 
 # Common Questions-
 **Q: Could a player teleport past the world border via command or ender pearl?**<br>
