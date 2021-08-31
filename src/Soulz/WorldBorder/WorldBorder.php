@@ -2,8 +2,8 @@
 
 namespace Soulz\WorldBorder;
 
-use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\math\Vector3;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
@@ -17,16 +17,20 @@ class WorldBorder extends PluginBase implements Listener {
     }
 
     public function onEnable(){
-        $this->getServer()->getPluginManager()->registerEvents($this,$this);
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder(), 0744, true);
         $this->saveResource('config.yml', false);
         $this->config = new Config($this->getDataFolder().'config.yml', Config::YAML); 
+        
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
         $this->getLogger()->info("Enabling WorldBorder by Soul ✞#9999");
         $this->getLogger()->info("If you find this project useful, please contact my Discord to consider donating");
     }
 
-    /** @param PlayerMoveEvent $e */
+    /** 
+     * @param PlayerMoveEvent $event 
+     */
     public function onMove(PlayerMoveEvent $event): void {
         $player = $event->getPlayer();
         $level = $player->getLevel();
