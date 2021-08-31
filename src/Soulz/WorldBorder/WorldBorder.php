@@ -15,7 +15,7 @@ class WorldBorder extends PluginBase implements Listener {
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder(), 0744, true);
-        $this->saveResource('config.yml', true);
+        $this->saveResource('config.yml', false);
         $this->config = new Config($this->getDataFolder() . 'config.yml', Config::YAML); 
         
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
