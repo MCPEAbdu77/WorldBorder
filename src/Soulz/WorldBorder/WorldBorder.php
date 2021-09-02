@@ -35,7 +35,7 @@ class WorldBorder extends PluginBase implements Listener {
 
             if($v2->distance($v1) > $dat[$level->getName()]){
                 $event->setCancelled();
-                $player->sendMessage(Utils::RED_PREFIX . $this->getConfig()->get("border-message") . TextFormat::RESET);
+                $player->sendMessage(Utils::RED_PREFIX . $this->getConfig()->get("border.border-message") . TextFormat::RESET);
             }
 
         }
