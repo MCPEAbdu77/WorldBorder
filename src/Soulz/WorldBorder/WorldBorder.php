@@ -14,7 +14,6 @@ class WorldBorder extends PluginBase implements Listener {
     private $playerMotionCooldown = [];
 
     public function onEnable(){
-    	@mkdir($this->getDataFolder());
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -31,13 +30,13 @@ class WorldBorder extends PluginBase implements Listener {
             $v2 = new Vector3($player->x, 0, $player->z);
 
             if($v2->distance($v1) > $dat[$level->getName()]){
-				if (!isset($this->playerMotionCooldown[$player->getName()]) or $this->playerMotionCooldown[$player->getName()] > 3) {
-					$player->sendTip("§l§8[§c!§8] §cWarning §8[§c!§8] \n§r§cYou have reached the world border§e!");
-					$player->setMotion($event->getFrom()->subtract($player->getLocation())->normalize()->multiply(2));
-					$this->playerMotionCooldown[$player->getName()] = 0;
-				} else {
-					$this->playerMotionCooldown[$player->getName()] = $this->playerMotionCooldown[$player->getName()] + 1;
-				}
+		if (!isset($this->playerMotionCooldown[$player->getName()]) or $this->playerMotionCooldown[$player->getName()] > 3) {
+			$player->sendTip("§l§8[§c!§8] §cWarning §8[§c!§8] \n§r§cYou have reached the world border§e!");
+			$player->setMotion($event->getFrom()->subtract($player->getLocation())->normalize()->multiply(2));					
+			$this->playerMotionCooldown[$player->getName()] = 0;
+		} else {
+			$this->playerMotionCooldown[$player->getName()] = $this->playerMotionCooldown[$player->getName()] + 1;
+		}
 
             }
 
