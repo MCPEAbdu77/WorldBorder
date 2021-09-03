@@ -4,20 +4,17 @@ namespace Soulz\WorldBorder;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\math\Vector3;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat;
 
 class WorldBorder extends PluginBase implements Listener {
 
+    private $playerMotionCooldown = [];
+
     public function onEnable(){
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        @mkdir($this->getDataFolder(), 0744, true);
-        $this->saveResource('config.yml', false);
-        $this->config = new Config($this->getDataFolder() . 'config.yml', Config::YAML); 
-        
+    	@mkdir($this->getDataFolder());
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -34,11 +31,24 @@ class WorldBorder extends PluginBase implements Listener {
             $v2 = new Vector3($player->x, 0, $player->z);
 
             if($v2->distance($v1) > $dat[$level->getName()]){
-                $event->setCancelled();
-                $player->sendMessage(Utils::RED_PREFIX . $this->getConfig()->get("border.border-message") . TextFormat::RESET);
+				if (!isset($this->playerMotionCooldown[$player->getName()]) or $this->playerMotionCooldown[$player->getName()] > 3) {
+					$player->sendTip("§l§8[§c!§8] §cWarning §8[§c!§8] \n§r§cYou have reached the world border§e!");
+					$player->setMotion($event->getFrom()->subtract($player->getLocation())->normalize()->multiply(2));
+					$this->playerMotionCooldown[$player->getName()] = 0;
+				} else {
+					$this->playerMotionCooldown[$player->getName()] = $this->playerMotionCooldown[$player->getName()] + 1;
+				}
+
             }
 
         }
 
     }
+
+    public function onQuit(PlayerQuitEvent $event) {
+		$playerName = $event->getPlayer()->getName();
+		if(isset($this->playerMotionCooldown[$playerName])){
+			unset($this->playerMotionCooldown[$playerName]);
+		}
+	}
 }
