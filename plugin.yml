@@ -1,6 +1,6 @@
 name: WorldBorder
 main: Soulz\WorldBorder\WorldBorder 
 version: 1.0.0
-api: 3.0.0
-author: Soulz
+api: 4.0.0
+author: Soulz , MCA7
 description: "Creates World Border and Blocks Players from Entering the Border"
