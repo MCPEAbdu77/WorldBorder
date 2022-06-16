@@ -26,11 +26,11 @@ class WorldBorder extends PluginBase implements Listener {
         $level = $player->getWorld();
         $dat = $this->getConfig()->get("border");
 
-        if(isset($dat[$level->getName()])){
+        if(isset($dat[$level->getDataFolder()])){
             $v1 = new Vector3($level->getSpawnLocation()->getX(), 0, $level->getSpawnLocation()->getZ());
             $v2 = new Vector3($pos->x, 0, $pos->z);
 
-            if($v2->distance($v1) > $dat[$level->getName()]){
+            if($v2->distance($v1) > $dat[$level->getDataFolder()]){
 		if (!isset($this->playerMotionCooldown[$player->getName()]) or $this->playerMotionCooldown[$player->getName()] > 3) {
 			$player->sendTip("§l§8[§c!§8] §cWarning §8[§c!§8] \n§r§cYou have reached the world border§e!");
 			$player->setMotion($event->getFrom()->subtract($player->getLocation())->normalize()->multiply(2));					
