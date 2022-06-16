@@ -6,14 +6,14 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\math\Vector3;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 
 class WorldBorder extends PluginBase implements Listener {
 
     private $playerMotionCooldown = [];
 
-    public function onEnable(){
+    public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -22,12 +22,13 @@ class WorldBorder extends PluginBase implements Listener {
      */
     public function onMove(PlayerMoveEvent $event): void {
         $player = $event->getPlayer();
-        $level = $player->getLevel();
+	$pos = $player->getPosition();
+        $level = $player->getWorld();
         $dat = $this->getConfig()->get("border");
 
         if(isset($dat[$level->getName()])){
             $v1 = new Vector3($level->getSpawnLocation()->getX(), 0, $level->getSpawnLocation()->getZ());
-            $v2 = new Vector3($player->x, 0, $player->z);
+            $v2 = new Vector3($pos->x, 0, $pos->z);
 
             if($v2->distance($v1) > $dat[$level->getName()]){
 		if (!isset($this->playerMotionCooldown[$player->getName()]) or $this->playerMotionCooldown[$player->getName()] > 3) {
@@ -44,7 +45,7 @@ class WorldBorder extends PluginBase implements Listener {
 
     }
 
-    public function onQuit(PlayerQuitEvent $event) {
+    public function onQuit(PlayerQuitEvent $event): void {
 		$playerName = $event->getPlayer()->getName();
 		if(isset($this->playerMotionCooldown[$playerName])){
 			unset($this->playerMotionCooldown[$playerName]);
